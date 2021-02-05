@@ -31,7 +31,8 @@ class App extends Component {
       dataNextDays: [],
       dataWeatherLocation: [],
       session: 'morning',
-      arrayDataCondition: {}
+      arrayDataCondition: {},
+      checkHideSun: false
     }
     this.getDataCondition = this.getDataCondition.bind(this)
  }
@@ -197,27 +198,27 @@ class App extends Component {
     if (el.scrollLeft <= 210 && el.scrollLeft >= 1) {
       time = (el.scrollLeft) / 210
       coor = this.getBezierXY(time, 0, 120, 0, 120, 105, 120, 210, 120)
-      this.setState({ tranlateX: coor.x, coorY: coor.y })
+      this.setState({ tranlateX: coor.x, coorY: coor.y, checkHideSun: false, hour: coor.x -210 })
     }
     if (el.scrollLeft <= 570 && el.scrollLeft > 210) {
       time = (el.scrollLeft - 210) / 360
       coor = this.getBezierXY(time, 210, 120, 210, 120, 390, -140, 570, 120)
-      this.setState({ tranlateX: coor.x, coorY: coor.y })
+      this.setState({ tranlateX: coor.x, coorY: coor.y, checkHideSun: true, hour: coor.x -570 })
     }
     if (el.scrollLeft <= 930 && el.scrollLeft > 570) {
       time = (el.scrollLeft - 570) / 360
       coor = this.getBezierXY(time, 570, 120, 570, 120, 720, 120, 930, 120)
-      this.setState({ tranlateX: coor.x, coorY: coor.y })
+      this.setState({ tranlateX: coor.x, coorY: coor.y, checkHideSun: false, hour: coor.x -930 })
     }
     if (el.scrollLeft <= 1290 && el.scrollLeft > 930) {
       time = (el.scrollLeft - 930) / 360
       coor = this.getBezierXY(time, 930, 120, 930, 120, 1110, -140, 1290, 120)
-      this.setState({ tranlateX: coor.x, coorY: coor.y })
+      this.setState({ tranlateX: coor.x, coorY: coor.y, checkHideSun: true, hour: coor.x -1290 })
     }
     if (el.scrollLeft <= 1660 && el.scrollLeft > 1290) {
       time = (el.scrollLeft - 1290) / 360
       coor = this.getBezierXY(time, 1290, 120, 1290, 120, 1470, 120, 1660, 120)
-      this.setState({ tranlateX: coor.x, coorY: coor.y })
+      this.setState({ tranlateX: coor.x, coorY: coor.y, checkHideSun: false, hour: coor.x -1660 })
 
     }
   }
@@ -319,6 +320,7 @@ class App extends Component {
           setTranlateTide= {this.state.setTranlateTide}
           hours= {this.state.hours}
           coorY= {this.state.coorY}
+          checkHideSun= {this.state.checkHideSun}
         />
         <MapWeather  
           alert = {this.alert}

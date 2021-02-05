@@ -16,7 +16,7 @@ const Header = (dataCurrent) => {
                     <span>Singapore</span>
                 </div>
                 <div className="block-icon">
-                    <img src="../bell.png" />
+                    <img src="./bell.png" />
                 </div>
             </header>
            

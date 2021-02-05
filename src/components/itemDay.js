@@ -17,13 +17,13 @@ const ItemDays = (item) => {
                 <div className="temp-wind">
                     <h3>{itemDay.day.condition.text}</h3>
                     <span>
-                        <img src="../icon-item.png" />
+                        <img src="./icon-item.png" />
                     {itemDay.day.mintemp_c} 
                     - 
                     {itemDay.day.maxtemp_c} &#8451;
                     </span>
                     <span>
-                    <img src="../icon-wind-blue.png" />
+                    <img src="./icon-wind-blue.png" />
                     {itemDay.day.maxwind_mph} 
                     - 
                     {itemDay.day.maxwind_kph} km/h

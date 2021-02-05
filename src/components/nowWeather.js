@@ -30,8 +30,8 @@ const NowWeather = (dataCurrent) => {
                     {dataCondition.condition.text}
                 </div>
                 <div className="temp-weather-percent">
-                    <span className="temp-text"><img src="../thermometer.png" />{dataCondition.temp_c} &#8451; </span>
-                    <span className="temp-text-humidity"><img src="../humidity.png" />{dataCondition.humidity} % </span>
+                    <span className="temp-text"><img src="./thermometer.png" />{dataCondition.temp_c} &#8451; </span>
+                    <span className="temp-text-humidity"><img src="./humidity.png" />{dataCondition.humidity} % </span>
                 </div>
             </div>
             <div className="list-function">

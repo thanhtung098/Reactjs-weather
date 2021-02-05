@@ -142,12 +142,12 @@
     cursor: pointer;
     height: 32px;
 }
-.change-section-day span:hover{
+/* .change-section-day span:hover{
     background: #5ebae1;
     height: 44px;
     margin-top: -5px;
     padding-top: 12px;
-}
+} */
 .change-section-day span.active {
     background: #5ebae1;
     height: 44px;

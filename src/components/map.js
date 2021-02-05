@@ -25,14 +25,14 @@ const MapWeather = ({arrayDataCondition,dataNextDays,getDataCondition,session}) 
     }
     return (
         <div className="ctent-map">
-                <img src="../map-singapo.jpg" />
+                <img src="./map-singapo.jpg" />
                 <div className="body-map">
                     <div className="status-weather">
                         <p>24-hour Forecast</p>
                          <div className="list-current-status">
-                            <span><img src="../thermometer.png" /> Temp <br/>{dataCurrent.day.mintemp_c } - {dataCurrent.day.maxtemp_c } &#8451;</span>
-                            <span><img src="../humidity.png" /> Humidity <br/>{dataCurrent.day.avghumidity }%</span>
-                            <span><img src="../icon-wind-blue-white.png" /> Wind <br/>{dataCurrent.day.maxwind_mph } - {dataCurrent.day.maxwind_kph }km/h</span>
+                            <span><img src="./thermometer.png" /> Temp <br/>{dataCurrent.day.mintemp_c } - {dataCurrent.day.maxtemp_c } &#8451;</span>
+                            <span><img src="./humidity.png" /> Humidity <br/>{dataCurrent.day.avghumidity }%</span>
+                            <span><img src="./icon-wind-blue-white.png" /> Wind <br/>{dataCurrent.day.maxwind_mph } - {dataCurrent.day.maxwind_kph }km/h</span>
                          </div>
                          <div className="weather-location">
                             <span className="top-location">

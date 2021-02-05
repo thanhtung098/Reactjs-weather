@@ -1,6 +1,6 @@
 import React from 'react';
 import './Chart.css'
-const Chart = ({tranlateX, setTranlateTide,hours,coorY}) => {
+const Chart = ({tranlateX, setTranlateTide,hours,coorY,checkHideSun}) => {
     let x = tranlateX;
     const y = 0;
     const c = setTranlateTide;
@@ -12,7 +12,13 @@ const Chart = ({tranlateX, setTranlateTide,hours,coorY}) => {
     };
     let dateNow = new Date()
     let getHour = 0, minutes = 0
-    getHour = Math.floor((tranlateX * 2) / 60)
+    getHour = Math.floor((tranlateX * 2) / 60) 
+    if(getHour > 24 && getHour < 48) {
+        getHour = getHour - 24
+    }
+    if(getHour > 48) {
+        getHour = getHour - 48
+    }
     minutes = Math.round(tranlateX % 60);
     let timeAmPm
     timeAmPm = getHour + ' : ' + minutes + ' AM'
@@ -38,8 +44,8 @@ const Chart = ({tranlateX, setTranlateTide,hours,coorY}) => {
                 <span>{timeAmPm}</span>
             </div>
             <div className="block-icon-sun">
-                <div className="icon-sun" style={{ top: coorY - 18 }}>
-                <img src="../sun-line-icon.png" />
+                <div className="icon-sun" className={checkHideSun === true? 'icon-sun active': 'icon-sun icon-moon'} style={{ top: coorY - 18 }}>
+                <img src="./sun-line-icon.png"  />
                 </div>
             </div>
             </div>
