@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+body {
+    font-size: 13px;
+}
+.container-page {
+    width: 400px;
+    margin: 0 auto;
+}
+.block-canvas-linesun {
+    width: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content-chart-sun {
+    width: 360px;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.block-sun-line {
+    width: 400px;
+    overflow-x: scroll;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    padding: 0 20px;
+    height: 170px;
+}
+.block-sun-line::-webkit-scrollbar {
+    /* display: none; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.icon-sun img {
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.set-scroll {
+    width: 2000px;
+    opacity: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ctent-sun-line {
+    width: 360px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 8;
+    padding-left: 180px;
+}
+
+.top-content {
+    position: relative;
+    height: 300px;
+    background: rgb(42,79,186);
+background: -moz-linear-gradient(180deg, rgba(42,79,186,1) 9%, rgba(53,117,204,1) 22%);
+background: -webkit-linear-gradient(180deg, rgba(42,79,186,1) 9%, rgba(53,117,204,1) 22%);
+background: linear-gradient(180deg, rgba(42,79,186,1) 9%, rgba(53,117,204,1) 22%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2a4fba",endColorstr="#3575cc",GradientType=1);
+
+}
+.now-weather {
+    color: #fff;
+    width: 220px;
+    margin: 20px auto;
+    position: relative;
+    padding-left: 62px;
+}
+.status-weather {
+    color: #fff;
+    font-size: 26px;
+}
+.temp-weather-percent {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
+    position: relative;
+}
+.temp-weather-percent  span {
+    font-size: 16px;
+}
+.temp-text {
+    margin-right: 20px;
+}
+.list-function{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow-x: scroll;
+
+}
+.list-function ul {
+    display: flex;
+}
+.list-function ul li {
+    list-style-type: none;
+    text-align: center;
+    border-right: solid 1px #fff;
+    padding: 0 10px;
+    min-width: 85px;
+}
+.list-function ul li span {
+    display: block;
+    color: #fff;
+    padding: 4px;
+    
+}
+.temp-text img{
+    width: 9px;
+    margin-right: 12px;
+    vertical-align: center;
+}
+.temp-text-humidity img{
+    width: 13px;
+    margin-right: 12px;
+    vertical-align: center;
+}
+.icon-windy {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.icon-windy img {
+    width: 48px;
+}
+#canvas {
+    z-index: 10;
+    position: relative;
+    margin-top: 15px;
+}
+#canvas-tide {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    z-index: 1;
 }

@@ -1,0 +1,37 @@
+
+header {
+    height: 65px;
+    
+    position: relative;
+}
+.toggle-bar  {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+}
+.toggle-bar .icon-bar {
+    width: 22px;
+    height: 1px;
+    background: #fff;
+    display: block;
+    margin-top: 6px;
+}
+.block-location {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 120px;
+    text-align: center;
+    color: #fff;
+}
+.block-location span {
+    color: #fff;
+}
+.block-icon {
+    position: absolute;
+    top: 15px;
+    width: 28px;
+    right: 15px;
+}
